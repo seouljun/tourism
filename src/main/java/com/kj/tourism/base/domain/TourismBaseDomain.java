@@ -12,6 +12,8 @@ public class TourismBaseDomain {
     @ReadOnlyProperty
     private int pageNo;
     @ReadOnlyProperty
+    private int totalCount;
+    @ReadOnlyProperty
     private String MobileOs;
     @ReadOnlyProperty
     private String MobileApp;
