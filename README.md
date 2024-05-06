@@ -8,6 +8,7 @@
 # 개발 환경
 - `JAVA 17`
 - `React Native`
+- Spring Boot : `3.2.5`
 - IDE : `Intellij`
 - Database : `Postgresql14`
 - ORM : `JPA`
