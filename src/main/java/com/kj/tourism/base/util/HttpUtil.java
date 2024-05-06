@@ -1,5 +1,6 @@
 package com.kj.tourism.base.util;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.ObjectUtils;
 
 import java.util.Map;
@@ -9,6 +10,7 @@ public class HttpUtil {
     private static final String QUESTION_MARK = "?";
     private static final String AMPERSAND = "&";
     private static final String EQUAL = "=";
+    private static final String ERROR_MESSAGE = "parameter map is null";
 
     public static String makeRequestParam(Map<String, String> map) {
         StringBuilder sb;
@@ -29,9 +31,20 @@ public class HttpUtil {
 
         }
         else {
-            throw new RuntimeException("parameter map is null");
+            throw new RuntimeException(ERROR_MESSAGE);
         }
 
         return sb.toString();
+    }
+
+    public static <T> String makeRequestParam(T t) {
+        if (ObjectUtils.isNotEmpty(t)) {
+            ObjectMapper mapper = new ObjectMapper();
+            Map map = mapper.convertValue(t, Map.class);
+            return makeRequestParam(map);
+        }
+        else {
+            throw new RuntimeException(ERROR_MESSAGE);
+        }
     }
 }
