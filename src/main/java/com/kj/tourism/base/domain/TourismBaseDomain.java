@@ -8,13 +8,13 @@ import org.springframework.data.annotation.ReadOnlyProperty;
 @Setter
 public class TourismBaseDomain {
     @ReadOnlyProperty
-    private int numOfRows;
+    private Integer numOfRows;
     @ReadOnlyProperty
-    private int pageNo;
+    private Integer pageNo;
     @ReadOnlyProperty
-    private int totalCount;
+    private Integer totalCount;
     @ReadOnlyProperty
-    private String MobileOs;
+    private String MobileOS;
     @ReadOnlyProperty
     private String MobileApp;
     @ReadOnlyProperty

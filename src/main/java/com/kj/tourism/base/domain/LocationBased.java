@@ -15,14 +15,14 @@ public class LocationBased extends TourismBaseDomain{
     private String firstimage2;
     private String cpyrhtDivCd;
     private String addr1;
-    private String contenttypeid;
+//    private String contenttypeid;
     private String createdtime;
     private String dist;
     private String firstimage;
     private String areacode;
     private String booktour;
-    private String mapx;
-    private String mapy;
+//    private String mapx;
+//    private String mapy;
     private String mlevel;
     private String sigungucode;
     private String tel;
