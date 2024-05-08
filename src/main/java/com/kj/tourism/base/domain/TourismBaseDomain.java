@@ -2,27 +2,26 @@ package com.kj.tourism.base.domain;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.ReadOnlyProperty;
 
 @Getter
 @Setter
 public class TourismBaseDomain {
-    @ReadOnlyProperty
+    //@JsonIgnore
     private Integer numOfRows;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private Integer pageNo;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private Integer totalCount;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String MobileOS;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String MobileApp;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String _type;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String listYN;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String arrange;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String serviceKey;
 }

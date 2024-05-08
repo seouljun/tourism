@@ -2,7 +2,6 @@ package com.kj.tourism.base.domain;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.springframework.data.annotation.ReadOnlyProperty;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
@@ -35,14 +34,14 @@ public class LocationBased extends TourismBaseDomain{
     //----------------------------------
     // REQUEST PARAMETER
     //----------------------------------
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String mapX;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String mapY;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private Long radius;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String contentTypeId;
-    @ReadOnlyProperty
+    //@JsonIgnore
     private String modifiedtime;
 }
