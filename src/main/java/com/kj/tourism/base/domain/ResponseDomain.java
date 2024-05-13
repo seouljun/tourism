@@ -1,5 +1,6 @@
 package com.kj.tourism.base.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -36,27 +37,40 @@ public class ResponseDomain {
     @Getter
     @Setter
     public static class Items{
-        List<Item> item;
+        @JsonProperty("item")
+        List<LocationBasedResponse> locationBasedResponse;
     }
 
     @Getter
     @Setter
-    public static class Item{
-        private String contentid;
+    public static class LocationBasedResponse {
+        @JsonProperty("contentid")
+        private String contentId;
         private String addr2;
-        private String firstimage2;
+        @JsonProperty("firstimage2")
+        private String firstImage2;
         private String cpyrhtDivCd;
-        private String addr1;
-        private String contenttypeid;
-        private String createdtime;
+        @JsonProperty("addr1")
+        private String addr;
+        @JsonProperty("contenttypeid")
+        private String contentTypeId;
+        @JsonProperty("createdtime")
+        private String createdTime;
         private String dist;
-        private String firstimage;
-        private String areacode;
-        private String booktour;
-        private String mapx;
-        private String mapy;
-        private String mlevel;
-        private String sigungucode;
+        @JsonProperty("firstimage")
+        private String firstImage;
+        @JsonProperty("areacode")
+        private String areaCode;
+        @JsonProperty("booktour")
+        private String bookTour;
+        @JsonProperty("mapx")
+        private String mapX;
+        @JsonProperty("mapy")
+        private String mapY;
+        @JsonProperty("mlevel")
+        private String mLevel;
+        @JsonProperty("sigungucode")
+        private String sigunguCode;
         private String tel;
         private String title;
         private String cat1;

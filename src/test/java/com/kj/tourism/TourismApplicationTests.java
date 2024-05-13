@@ -19,7 +19,7 @@ class TourismApplicationTests {
         LocationBased locationBased = new LocationBased();
         locationBased.setMobileOS("ETC");
         locationBased.setMobileApp("TOUR");
-        locationBased.set_type("json");
+        locationBased.setType("json");
         locationBased.setMapX("127");
         locationBased.setMapY("37");
         locationBased.setRadius(20000L);
